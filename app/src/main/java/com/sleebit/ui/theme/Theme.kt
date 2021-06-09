@@ -5,26 +5,36 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
-        primary = Purple200,
-        primaryVariant = Purple700,
-        secondary = Teal200
+    primary = DeepPurple100,
+    primaryVariant = DeepPurple300,
+    secondary = LightBlue100,
+    secondaryVariant = LightBlue300,
+    background = Dark,
+    surface = Dark,
+    error = Color.Red,
+    onPrimary = Color.Black,
+    onSecondary = Color.Black,
+    onBackground = Color.White,
+    onSurface = Color.White,
+    onError = Color.White,
 )
 
 private val LightColorPalette = lightColors(
-        primary = Purple500,
-        primaryVariant = Purple700,
-        secondary = Teal200
-
-        /* Other default colors to override
+    primary = DeepPurple100,
+    primaryVariant = DeepPurple300,
+    secondary = LightBlue100,
+    secondaryVariant = LightBlue300,
     background = Color.White,
     surface = Color.White,
-    onPrimary = Color.White,
+    error = Color.Red,
+    onPrimary = Color.Black,
     onSecondary = Color.Black,
     onBackground = Color.Black,
     onSurface = Color.Black,
-    */
+    onError = Color.White
 )
 
 @Composable
@@ -36,9 +46,9 @@ fun SleebitTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composabl
     }
 
     MaterialTheme(
-            colors = colors,
-            typography = Typography,
-            shapes = Shapes,
-            content = content
+        colors = colors,
+        typography = Typography,
+        shapes = Shapes,
+        content = content
     )
 }
